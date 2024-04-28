@@ -470,9 +470,9 @@ Then, in your `.parcelrc` you can reference `parcel-transformer-foo` as you woul
 
 You can also choose to keep your app in the root (e.g. in a `src` folder) rather than inside `packages/app`.
 
-#### The `link:` protocol
+#### The `file:` protocol
 
-Yarn supports defining dependencies using the `link:` protocol to reference local directories as packages. For example, you could set up a project structure like this:
+Yarn supports defining dependencies using the `file:` protocol to reference local directories as packages. For example, you could set up a project structure like this:
 
 ```
 project
@@ -486,7 +486,7 @@ project
         └── FooTransformer.js
 ```
 
-In your root package.json, you can define a dependency on the `parcel-transformer-foo` package using the `link:` protocol.
+In your root package.json, you can define a dependency on the `parcel-transformer-foo` package using the `file:` protocol.
 
 {% sample %}
 {% samplefile "package.json" %}
@@ -496,7 +496,7 @@ In your root package.json, you can define a dependency on the `parcel-transforme
   "name": "my-project",
   "dependencies": {
     "parcel": "^2.0.0",
-    "parcel-transformer-foo": "link:./parcel-transformer-foo"
+    "parcel-transformer-foo": "file:./parcel-transformer-foo"
   }
 }
 ```
